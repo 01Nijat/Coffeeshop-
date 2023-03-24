@@ -25,3 +25,14 @@
  body{
     background:#f7f7f7;
  }
+ header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index:1000;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background:#fff;
+    padding:2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1)
+ }
