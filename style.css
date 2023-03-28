@@ -69,15 +69,31 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
- }
+    min-height: 100vh;
+    align-items:center;
+    background:url(img/home-bg.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+ }  
  .home .content{
     flex:1 1 40rem;
+    padding-top: 6.5rem;
  }
  .home .image{
  flex:1 1 40rem;
  }
  .home .image img{
     width: 100%;
+    padding:1rem;
+    animation:float 3s linear infinite;
+ }
+ @keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(3rem);
+    }
  }
 
 
