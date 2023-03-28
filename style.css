@@ -114,6 +114,7 @@
         top:100%; left:0; right:0;
         background: #f7f7f7;
         border-top: .1rem solid rgba(0,0,0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
     header .navbar a{
         margin: 1.5rem;
@@ -122,5 +123,11 @@
         border: .2rem solid rgba(0,0,0, .1);
         border-left: .5rem solid var(--red);
     }
+}
+@media(max-width:400px){
+    html{
+        font-size: 50%;    
+     }  
+    
 }
 
