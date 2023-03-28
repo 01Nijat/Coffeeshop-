@@ -109,5 +109,18 @@
     #menu-bar{
         display:initial;
     }
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0,0,0, .1);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0,0,0, .1);
+        border-left: .5rem solid var(--red);
+    }
 }
 
