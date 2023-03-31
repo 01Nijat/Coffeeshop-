@@ -51,6 +51,10 @@
     transition: .3s linear;
     z-index: -1;
  }
+ .btn:hover::before{
+    width:100%;
+    left:0;
+ }
  header{
     position: fixed;
     top:0; left: 0; right:0;
