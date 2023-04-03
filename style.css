@@ -177,6 +177,11 @@
    font-size: 2.5rem;
    color:#333;
 }
+.speciality .box-container .box .content p{
+   font-size: 1.6rem;
+   color:#666;
+   padding:1rem 0;
+}
 
 
 
