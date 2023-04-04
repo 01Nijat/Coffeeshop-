@@ -185,6 +185,9 @@
 .speciality .box-container .box:hover .image{
    top: 0;
 }
+.speciality .box-container .box:hover .content{
+   transform: translateY(100%);
+}
 
 
 
