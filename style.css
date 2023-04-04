@@ -182,6 +182,9 @@
    color:#666;
    padding:1rem 0;
 }
+.speciality .box-container .box:hover .image{
+   top: 0;
+}
 
 
 
