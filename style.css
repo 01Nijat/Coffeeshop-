@@ -188,7 +188,26 @@
 .menu .box-container .box:hover .content{
    transform: translateY(100%);
 }
-
+.menu .box-container2{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+.menu .box-container2 .box2{
+   padding: 2rem;
+   background: #fff;
+   box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+   border:  .1rem solid rgba(0,0,0, .3);
+   border-radius: .5rem;
+   text-align: center;
+   flex: 1 1 30rem;
+   position: relative;
+}
+.menu .box-container2 .box2 img{
+   height: 25rem;
+   object-fit: cover;
+   width: 100%;
+}
 
 
  
