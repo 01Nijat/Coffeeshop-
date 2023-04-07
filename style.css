@@ -207,8 +207,22 @@
    height: 25rem;
    object-fit: cover;
    width: 100%;
+   border-radius: .5rem;
 }
-
+.menu .box-container2 .box2 .price{
+   position: absolute;
+   top:3rem; left:3rem;
+   background: var(--red);
+   color:#fff;
+   font-size: 2rem;
+   padding: .5rem 1rem;
+   border-radius: .5rem;
+}
+.menu .box-container2 .box2 h3{
+   color: #333;
+   font-size: 2.5rem;
+   padding-top: 1rem;
+}
 
  
 
