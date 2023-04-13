@@ -11,7 +11,7 @@ window.onscroll = () =>{
 }
 const sliders = document.querySelectorAll('.slider');
 const priceSliders = document.querySelectorAll('.price-slider');
-
+const sizeSliders = document.querySelectorAll('.size-slider');
 sliders.forEach((slider, index) => {
    const images = slider.querySelectorAll('img');
    const prices = priceSliders[index].querySelectorAll('.price');
