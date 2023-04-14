@@ -165,6 +165,15 @@
    position:absolute;
    top:-100%; left:0;
 }
+.menu .box-container .box .price{
+   position: absolute;
+   top:-95%; left: 2rem;
+   background: var(--red);
+   color: #fff;
+   font-size: 4rem;
+   padding: .5rem 1rem;
+   border-radius: .5rem;
+}
 .menu .box-container .box .content{
    text-align: center;
    background: #fff;
