@@ -1,0 +1,86 @@
+[
+      {
+        "id": 1,
+        "name": "Classic Drink",
+        "coffies": [
+          {
+            "id": 1,
+            "name": "Americano",
+            "sizes": [
+              {
+                "id": 1,
+                "name": "Small",
+                "price": 3.00,
+                "imageUrl": "https://example.com/images/americano_small.jpg"
+              },
+              {
+                "id": 2,
+                "name": "Medium",
+                "price": 5.00,
+                "imageUrl": "https://example.com/images/americano_medium.jpg"
+              },
+              {
+                "id": 3,
+                "name": "Large",
+                "price": 7.00,
+                "imageUrl": "https://example.com/images/americano_large.jpg"
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Cappuccino",
+            "sizes": [
+              {
+                "id": 1,
+                "name": "Small",
+                "price": 4.00,
+                "imageUrl": "https://example.com/images/cappuccino_small.jpg"
+              },
+              {
+                "id": 2,
+                "name": "Medium",
+                "price": 6.00,
+                "imageUrl": "https://example.com/images/cappuccino_medium.jpg"
+              },
+              {
+                "id": 3,
+                "name": "Large",
+                "price": 8.00,
+                "imageUrl": "https://example.com/images/cappuccino_large.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Special Drink",
+        "coffies": [
+          {
+            "id": 3,
+            "name": "Latte",
+            "sizes": [
+              {
+                "id": 1,
+                "name": "Small",
+                "price": 4.50,
+                "imageUrl": "https://example.com/images/latte_small.jpg"
+              },
+              {
+                "id": 2,
+                "name": "Medium",
+                "price": 6.50,
+                "imageUrl": "https://example.com/images/latte_medium.jpg"
+              },
+              {
+                "id": 3,
+                "name": "Large",
+                "price": 8.50,
+                "imageUrl": "https://example.com/images/latte_large.jpg"
+              }
+            ]
+          }
+        ]
+      }
+]

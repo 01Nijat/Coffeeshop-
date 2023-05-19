@@ -14,9 +14,13 @@ const sliders = document.querySelectorAll('.slider');
 const priceSliders = document.querySelectorAll('.price-slider');
 const sizeSliders = document.querySelectorAll('.size-slider');
 
+
 sliders.forEach((slider, index) => {
    const images = slider.querySelectorAll('img');
    const prices = priceSliders[index].querySelectorAll('.price');
+   const prevBtn = slider.querySelector('.prev-btn');
+   const nextBtn = slider.querySelector('.next-btn');
+
    let currentIndex = 0;
    let startX = 0;
    let isDragging = false;
@@ -118,13 +122,13 @@ sliders.forEach((slider, index) => {
    };
 
    const startAutoRotation = () => {
-      autoRotationInterval = setInterval(nextSlide, 7000);
+      autoRotationInterval = setInterval(nextSlide, 5000);
    };
 
    const stopAutoRotation = () => {
       clearInterval(autoRotationInterval);
    };
-
+   
    slider.addEventListener('mousedown', dragStart);
    slider.addEventListener('mousemove', dragMove);
    slider.addEventListener('mouseup', dragEnd);
@@ -136,6 +140,7 @@ sliders.forEach((slider, index) => {
    slider.addEventListener('mouseenter', stopAutoRotation);
    slider.addEventListener('mouseleave', startAutoRotation);
    window.addEventListener('deviceorientation', handleOrientationChange);
+
 
    startAutoRotation(); // avtomatik ceviremeek
 
