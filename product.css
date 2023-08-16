@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
  
  :root{
      --red:#ff3838;
@@ -68,7 +68,7 @@
     color:#fff
  }
  header{
-    position: fixed;
+    position: relative;
     top:0; left: 0; right:0;
     z-index:1000;
     display:flex;
@@ -139,18 +139,6 @@
     background:url(img/home-bg.jpg) no-repeat;
     background-size:cover;
     background-position: center;
- }  
- .home .content{
-    flex:1 1 40rem;
-    padding-top: 6.5rem;
- }
- .home .image{
- flex:1 1 40rem;
- }
- .home .image img{
-    width: 100%;
-    padding:1rem;
-    animation:float 3s linear infinite;
  }
  @keyframes float{
     0%, 100%{
@@ -160,166 +148,42 @@
         transform: translateY(3rem);
     }
  }
- .home .content h3{
-    font-size: 5rem;
-    color:#333
- }
- .home .content p{
-    font-size: 1.7rem;
-    color:#666;
-    padding:1rem 0;
- }
-
-.menu .box-container{
-   display:flex;
-   flex-wrap:wrap;
-   gap:1.5rem;
-}
-.menu .box-container .box{
-   flex:1 1 30rem;
-   position: relative;
-   overflow:hidden;
-   box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
-   border:.1rem solid rgba(0,0,0, .3);
-   cursor: pointer;
-   border-radius: .5rem;
-}
-.menu .box-container .box .image{
-   height:100%;
-   width:100%;
-   object-fit:cover;
-   position:absolute;
-   top:-100%; left:0;
-}
-.menu .box-container .box .price{
-   position: absolute;
-   top:-95%; left: 2rem;
-   background: var(--red);
-   color: #fff;
-   font-size: 4rem;
-   padding: .5rem 1rem;
-   border-radius: .5rem;
-}
-.menu .box-container .box .content{
-   text-align: center;
-   background: #fff;
-   padding:2rem;
-}
-.menu .box-container .box .content img{
-   margin: 1.5rem 0;
-}
-.menu .box-container .box .content h3{
-   font-size: 2.5rem;
-   color:#333;
-}
-.menu .box-container .box .content p{
-   font-size: 1.6rem;
-   color:#666;
-   padding:1rem 0;
-}
-.menu .box-container .box:hover .image{
-   top: 0;
-}
-.menu .box-container .box:hover .content{
-   transform: translateY(100%);
-}
-.menu .box-container2 {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 1.5rem;
-}
-
-.menu .box-container2 .box2 {
-   padding: 2rem;
-   background: #fff;
-   box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
-   border: .1rem solid rgba(0,0,0, .3);
-   border-radius: .5rem;
-   text-align: center;
-   flex: 1 1 30rem;
-   position: relative;
-}
-
-.menu .box-container2 .box2 img {
-   height: 25rem;
-   object-fit: cover;
-   width: 100%;
-   border-radius: .5rem;
-   pointer-events: none;
-}
-
-.menu .box-container2 .box2 h3 {
-   color: #333;
-   font-size: 2.5rem;
-   padding-top: 1rem;
-}
-
-.menu .box-container2 .box2 .starts {
-   color: gold;
-   font-size: 1.5rem;
-   padding: 1rem .1rem;
-}
-
-.slider {
-   position: relative;
-   width: 100%;
-   height: 25rem;
-   overflow: hidden;      
-}
-
-.slider img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   transition: opacity 0.3s ease-in-out;
-   position: absolute;
-   top: 0;
-   left: 0;
-   opacity: 0;
-}
-.prev-btn,
-.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-.slider img.active {
-   opacity: 1;
-}
-
-.price-slider {
-   display: flex;
-   justify-content: center;
-   margin-top: 1rem;
-}
-
-.price-slider .price {
-   position: absolute;
-   top:3rem; left: 3rem;
-   background: var(--red);
+  .product-list {
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about {
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  .price, .weight {
+    background: var(--red);
    color: #fff;
    font-size: 1.5rem;
-   padding: .5rem 1rem;
-   border-radius: .5rem;
-   
-}
-
-
-
-
-
-/* media queries */
+    margin-top: 5px;
+  }
+  
+ 
+  /* media queries */
 @media(max-width:991px){
     html{
         font-size: 55%;
@@ -327,6 +191,9 @@
      }  
      header{
         padding:2rem;
+     }
+     .product {
+        width: 100%;
      }
      section{
         padding: 2rem;
@@ -370,6 +237,3 @@
      }  
     
 }
-
-
-
