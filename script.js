@@ -31,7 +31,7 @@ sliders.forEach((slider, index) => {
       images.forEach((image, i) => {
          if (i === index) {
             image.classList.add('active');
-         } else {
+         } else {t
             image.classList.remove('active');
          }
       });
@@ -56,6 +56,7 @@ sliders.forEach((slider, index) => {
       }
       isDragging = true;
    };
+   
 
    const dragMove = (e) => {
       e.preventDefault();
@@ -69,7 +70,7 @@ sliders.forEach((slider, index) => {
       const diffX = currentX - startX;
       const slideWidth = slider.offsetWidth;
       const slideChangeThreshold = slideWidth / 4;
-
+      
       if (diffX > slideChangeThreshold) {
          isDragging = false;
          startX = 0;
@@ -91,6 +92,7 @@ sliders.forEach((slider, index) => {
       showSlide(currentIndex);
       showPrice(currentIndex);
    };
+   
 
    const nextSlide = () => {
       currentIndex = (currentIndex + 1) % images.length;
