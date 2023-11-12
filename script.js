@@ -31,7 +31,7 @@ sliders.forEach((slider, index) => {
       images.forEach((image, i) => {
          if (i === index) {
             image.classList.add('active');
-         } else {t
+         } else {
             image.classList.remove('active');
          }
       });
@@ -56,6 +56,7 @@ sliders.forEach((slider, index) => {
       }
       isDragging = true;
    };
+   
    
 
    const dragMove = (e) => {
