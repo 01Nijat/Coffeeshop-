@@ -23,6 +23,7 @@ sliders.forEach((slider, index) => {
 
    let currentIndex = 0;
    let startX = 0;
+   let startY = 0;
    let isDragging = false;
    let initialRotation = null;
    let autoRotationInterval = null;
@@ -48,30 +49,40 @@ sliders.forEach((slider, index) => {
    };
 
    const dragStart = (e) => {
-      e.preventDefault();
       if (e.touches) {
          startX = e.touches[0].clientX;
+         startY = e.touches[0].clientY;
       } else {
          startX = e.clientX;
+         startY = e.clientY;
       }
       isDragging = true;
    };
-   
-   
 
    const dragMove = (e) => {
-      e.preventDefault();
       if (!isDragging) return;
-      let currentX;
+
+      let currentX, currentY;
       if (e.touches) {
          currentX = e.touches[0].clientX;
+         currentY = e.touches[0].clientY;
       } else {
          currentX = e.clientX;
+         currentY = e.clientY;
       }
+
       const diffX = currentX - startX;
+      const diffY = currentY - startY;
+
+      if (Math.abs(diffY) > Math.abs(diffX)) {
+         isDragging = false;
+         return;
+      }
+
+      e.preventDefault();
       const slideWidth = slider.offsetWidth;
       const slideChangeThreshold = slideWidth / 4;
-      
+
       if (diffX > slideChangeThreshold) {
          isDragging = false;
          startX = 0;
@@ -86,6 +97,7 @@ sliders.forEach((slider, index) => {
    const dragEnd = () => {
       isDragging = false;
       startX = 0;
+      startY = 0;
    };
 
    const prevSlide = () => {
@@ -93,7 +105,6 @@ sliders.forEach((slider, index) => {
       showSlide(currentIndex);
       showPrice(currentIndex);
    };
-   
 
    const nextSlide = () => {
       currentIndex = (currentIndex + 1) % images.length;
@@ -109,7 +120,6 @@ sliders.forEach((slider, index) => {
 
       const rotation = event.alpha - initialRotation;
 
-      //donus mikdari 360 derece 6 slaytla serhedlemisik tutaqki
       const slideCount = images.length;
       const rotationRange = 360;
       const slideChangeThreshold = rotationRange / slideCount;
@@ -131,27 +141,22 @@ sliders.forEach((slider, index) => {
    const stopAutoRotation = () => {
       clearInterval(autoRotationInterval);
    };
-   
+
    slider.addEventListener('mousedown', dragStart);
    slider.addEventListener('mousemove', dragMove);
    slider.addEventListener('mouseup', dragEnd);
    slider.addEventListener('mouseleave', dragEnd);
    slider.addEventListener('touchstart', dragStart);
-   slider.addEventListener('touchmove', dragMove);
+   slider.addEventListener('touchmove', dragMove, { passive: false });
    slider.addEventListener('touchend', dragEnd);
    slider.addEventListener('touchcancel', dragEnd);
    slider.addEventListener('mouseenter', stopAutoRotation);
    slider.addEventListener('mouseleave', startAutoRotation);
    window.addEventListener('deviceorientation', handleOrientationChange);
 
-
-   startAutoRotation(); // avtomatik ceviremeek
+   //startAutoRotation();
 
    showSlide(currentIndex);
    showPrice(currentIndex);
- 
+
 });
-
-
-
-
