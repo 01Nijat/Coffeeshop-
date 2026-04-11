@@ -160,3 +160,17 @@ sliders.forEach((slider, index) => {
    showPrice(currentIndex);
 
 });
+// axsam endirimleri - saat 17den sonra ac
+function checkTime() {
+    const now = new Date();
+    const hour = now.getHours();
+    const section = document.getElementById('teklifleriniz');
+    if (hour >= 17) {
+        section.style.display = 'block';
+    } else {
+        section.style.display = 'none';
+    }
+}
+
+checkTime();
+setInterval(checkTime, 60000); // her dakika kontrol et

@@ -1,7 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
  
  :root{
-     --red:#ff3838;
+     --red:#1e8c5a;
  }
  *{
     font-family: 'Nunito', sans-serif;
@@ -370,6 +370,48 @@
      }  
     
 }
+.aksam-alt {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
 
+.aksam-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.aksam-kart {
+    background: #fff;
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.aksam-baslik {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.aksam-metn {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: .5rem;
+}
+
+.endirim {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.kecmis {
+    color: #999;
+    text-decoration: line-through;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 2px;
+}
 
 
