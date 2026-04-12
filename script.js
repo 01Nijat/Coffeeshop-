@@ -155,7 +155,12 @@ sliders.forEach((slider, index) => {
    window.addEventListener('deviceorientation', handleOrientationChange);
 
    //startAutoRotation();
-
+if (prevBtn) {
+    prevBtn.addEventListener('click', prevSlide);
+}
+if (nextBtn) {
+    nextBtn.addEventListener('click', nextSlide);
+}
    showSlide(currentIndex);
    showPrice(currentIndex);
 
