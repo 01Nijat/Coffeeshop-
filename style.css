@@ -255,7 +255,16 @@
    font-size: 2.5rem;
    padding-top: 1rem;
 }
-
+.menu .box-container2 .box2 .description {
+    font-size: 1.3rem;
+    color: #888;
+    margin-top: .5rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 .menu .box-container2 .box2 .starts {
    color: gold;
    font-size: 1.5rem;
