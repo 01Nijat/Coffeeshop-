@@ -57,6 +57,27 @@ sliders.forEach((slider, index) => {
          startY = e.clientY;
       }
       isDragging = true;
+      // butonları göster
+    const prev = slider.querySelector('.prev-btn');
+    const next = slider.querySelector('.next-btn');
+    if (prev) prev.style.opacity = '1';
+    if (next) next.style.opacity = '1';
+
+    // 2 saniye sonra gizle
+    setTimeout(() => {
+        if (prev) prev.style.opacity = '0';
+        if (next) next.style.opacity = '0';
+    }, 2000);
+
+    if (e.touches) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    } else {
+        startX = e.clientX;
+        startY = e.clientY;
+    }
+    isDragging = true;
+
    };
 
    const dragMove = (e) => {

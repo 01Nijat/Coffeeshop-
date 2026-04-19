@@ -12,6 +12,22 @@
         <link rel="stylesheet" href="style.css">
 
 </head>
+
+<div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+    <div style="background:#fff; border-radius:1rem; padding:3rem; width:90%; max-width:40rem; position:relative;">
+        
+        <button onclick="document.getElementById('modal').style.display='none'" style="position:absolute; top:1rem; right:1.5rem; font-size:2rem; background:none; border:none; cursor:pointer; color:#666;">✕</button>
+        
+        <h2 style="font-size:2.5rem; color:#333; margin-bottom:2rem;">Haqqımızda</h2>
+        
+        <p style="font-size:1.6rem; color:#666; margin-bottom:1rem;">🕐 09:00 - 18:00</p>
+        <p style="font-size:1.6rem; color:#666; margin-bottom:1rem;">📍 Port Baku Towers</p>
+        <p style="font-size:1.6rem; color:#666; margin-bottom:1rem;">📞 (+994 12) 437 93 93</p>
+        <p style="font-size:1.6rem; color:#666; margin-bottom:1rem;">📸 <a href="https://instagram.com/freshcatering" target="_blank" style="color:#666;">@freshcatering</a></p>
+        
+    </div>
+</div>
+
 <body>
     <header>
         <a href ="#" class="logo"><i class="fa fa-coffee" aria-hidden="true"></i>Coffee</a>
@@ -48,10 +64,12 @@
 <section class="home" id="home">
     <div class="content">
         <h3>Coffee made with love</h3>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate autem ipsam illo commodi explicabo saepe in, exercitationem, ex excepturi sequi veritatis. Reprehenderit facere id ipsum quos excepturi vitae odio nesciunt.
-        </p>
-        <a href="#" class="btn">Details</a>
+         <p>
+    Fresh Catering MMC 2010-cu ildən fəaliyyət göstərir və Azərbaycanda keyfiyyətli və münasib qiymətli katerinq xidmətləri təqdim edir. 
+    Şirkət sağlam, təzə və dadlı yeməklərlə müştəri məmnuniyyətini və iş mühitində rahatlığı artırmağı hədəfləyir. 
+    ISO 9001:2008 və ISO 22000:2005 sertifikatlarına malikdir.
+  </p>
+        <a href="#" class="btn" onclick="document.getElementById('modal').style.display='flex'; return false;">Details</a>
     </div>
     <div class="image"><img src="img/Untitled.jpeg" alt=""></div>
 </section>
@@ -519,7 +537,7 @@
 
         <div class="box2">
             <div class="slider">
-                <img src="img/ciabatta.jpg" alt="">
+                <img src="img/ciabata.jpg" alt="">
             </div>
             <div class="price-slider">
                 <span class="price">5 ₼</span>
@@ -529,7 +547,7 @@
 
         <div class="box2">
             <div class="slider">
-                <img src="img/tendir.jpg" alt="">
+                <img src="img/tortilla.jpg" alt="">
             </div>
             <div class="price-slider">
                 <span class="price">5 ₼</span>
@@ -539,7 +557,7 @@
 
         <div class="box2">
             <div class="slider">
-                <img src="img/chicken-roll.jpg" alt="">
+                <img src="img/roll.jpg" alt="">
             </div>
             <div class="price-slider">
                 <span class="price">5 ₼</span>
@@ -549,7 +567,7 @@
 
         <div class="box2">
             <div class="slider">
-                <img src="img/salyami.jpg" alt="">
+                <img src="img/salami.jpg" alt="">
             </div>
             <div class="price-slider">
                 <span class="price">5 ₼</span>
@@ -786,9 +804,43 @@
     </div>
 </section>
 <!-- yemekler end -->
+ <!-- sertifikatlar -->
+<section class="menu" id="sertifikat">
+    <h1 class="heading">Sertifika<span>tlarımız</span></h1>
+    <div style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; padding:2rem 0;">
+        
+        <div style="text-align:center;">
+            <img src="img/iso 9001 2015.png" alt="ISO 9001:2015" style="width:15rem; height:15rem; object-fit:contain;">
+            <h3 style="font-size:1.8rem; color:#333; margin-top:1rem;">ISO 9001:2015</h3>
+            <p style="font-size:1.4rem; color:#888;">Keyfiyyət menecmenti</p>
+        </div>
+
+        <div style="text-align:center;">
+            <img src="img/iso 22000:2018.png" alt="ISO 22000:2018" style="width:15rem; height:15rem; object-fit:contain;">
+            <h3 style="font-size:1.8rem; color:#333; margin-top:1rem;">ISO 22000:2018</h3>
+            <p style="font-size:1.4rem; color:#888;">Ərzaq təhlükəsizliyi</p>
+        </div>
+
+        <div style="text-align:center;">
+            <img src="img/qida tehlukesizlik.png" alt="Qida Təhlükəsizliyi Agentliyi" style="width:15rem; height:15rem; object-fit:contain;">
+            <h3 style="font-size:1.8rem; color:#333; margin-top:1rem;">Qida Təhlükəsizliyi</h3>
+            <p style="font-size:1.4rem; color:#888;">Agentliyi</p>
+        </div>
+
+    </div>
+</section>
+<!-- sertifikatlar end -->
 <!-- map-->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194437.83790629375!2d49.55748081207279!3d40.40682999384211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4030878a3ca1a847%3A0x3127913891710816!2sCafe%20de%20Costa%20Rica!5e0!3m2!1str!2saz!4v1689526320483!5m2!1str!2saz" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ <div style="padding: 0 9%;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.4972592856593!2d49.861805399999994!3d40.3756705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d01a8e13b05%3A0x4190ace997ade44b!2sPort%20Baku%20Towers%2C%20153%20Neftciler%20ave%2C%20Baku%201010!5e0!3m2!1sen!2saz!4v1776630262474!5m2!1sen!2saz" width="100%" height="350" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 <!--map end-->
+<!-- footer -->
+<footer style="background:#fff; padding:2rem 9%; text-align:center; border-top:0.1rem solid rgba(0,0,0,0.1); margin-top:2rem;">
+    <p style="font-size:1.4rem; color:#888; margin-bottom:.5rem;">© 2026 Fresh Catering MMC. Bütün hüquqlar qorunur.</p>
+    <p style="font-size:1.2rem; color:#bbb;">Designed by Nijat Asgarov</p>
+</footer>
+<!-- footer end -->
 <!--menu section bitis-->
 
 
